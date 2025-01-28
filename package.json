@@ -1,0 +1,40 @@
+{
+  "name": "lyctor",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Lexica Meet UI",
+  "author": "Robin Berjon <robin@berjon.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "watch": "concurrently --handle-input npm:watch-js",
+    "build": "npm run build-js",
+    "watch-js": "./build.js --watch",
+    "build-js": "./build.js"
+  },
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darobin/lyctor.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "devDependencies": {
+    "@atproto/lexicon": "^0.4.4",
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^8.26.0",
+    "lit": "^3.2.1"
+  }
+}
